@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setInterval</title>
+</head>
+<body>
+    <div class="main">
+        <h1>JavaScript BY Hitesh sir(setInterval)</h1>
+        <button id="start">start</button>
+        <button id="stop">stop</button>
+    </div>
+    
+    <script>
+        /*
+        setInterval() function is used wehn we wants to continuesly execute code a specific amount of time.
+        syntax: setInterval(function, delay, param1, param2, ... )
+        */
+    //    clearInterval(name);
+    let name;
+       
+       document.querySelector('#start').addEventListener('click', ()=>{
+            name = setInterval(() => {
+               console.log("Yash");
+           }, 1000);
+
+        })
+        document.querySelector('#stop').addEventListener('click', ()=>{
+            clearInterval(name);
+        })
+
+    </script>
+</body>
+</html>

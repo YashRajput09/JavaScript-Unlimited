@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM </title>
+    <style>
+        body{
+            background-color: #212121;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+
+    <script>
+        let mainDiv = document.createElement('div');
+        mainDiv.className = 'parentDiv';
+        mainDiv.style.border = '1px solid white';
+        const addText = document.createTextNode(" Hey Yash !");
+        mainDiv.appendChild(addText);
+        document.body.appendChild(mainDiv);
+
+        let childDiv = document.createElement('div');
+        console.log(childDiv);
+        childDiv.className = 'childDiv';
+        childDiv.style.border = '1px solid white';
+        childDiv.setAttribute('style', 'background-color: green');
+        const text = document.createTextNode(" There is nothig to do");
+        childDiv.appendChild(text);
+        mainDiv.appendChild(childDiv);
+
+    </script>
+</body>
+</html>

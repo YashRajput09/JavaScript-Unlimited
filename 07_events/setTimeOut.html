@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setTimeout</title>
+</head>
+<body>
+
+    <div class="main">
+        <h1>Chai or Code By Hitesh Sir</h1>
+        <button>Stop</button>
+    </div>
+    
+    <script>
+        /*
+        setTimeout() function is used when we wants to execute a code after specific amount of time. 
+        syntax: setTimeout(function, delay, param1, param2 , ...);
+
+        In below example the code "Yash" is print after 2s
+        */
+        setTimeout(() =>{
+            console.log("Yash");
+        }, 2000)
+
+        const name = setTimeout((str)=>{
+            console.log("Yash", str);
+        }, 1000, "Rajput")
+
+        // clearTimeout() is used to stop execution of setTimeout()
+        document.querySelector('button').addEventListener('click', ()=>{
+            clearTimeout(name)
+        })
+    </script>
+</body>
+</html>

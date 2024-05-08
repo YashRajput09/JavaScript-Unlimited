@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom manipulation </title>
+</head>
+<body>
+    <h2>DOM By Chai Or Code</h2>
+    <ul class="languages">
+        <li>javaScript</li>
+    </ul>
+
+    <script>
+
+        // add Element
+        let addLi = ((item) =>{
+            const newLi = document.createElement('li');
+            newLi.appendChild(document.createTextNode(item));
+            document.querySelector('.languages').appendChild(newLi)
+        });
+        addLi("JAVA");
+        addLi("Python")
+        addLi("Rust");
+
+        // Edit Element
+        let element = document.querySelector('li:nth-child(2)');
+        // element.innerHTML = "Ruby";
+        const newLi = document.createElement('li');
+        newLi.appendChild(document.createTextNode('Golang'));
+        element.replaceWith(newLi);
+
+        // Delete Element
+        let elmt = document.querySelector('li:last-child');
+        elmt.remove();
+    </script>
+</body>
+</html>

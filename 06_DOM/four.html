@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        body{
+            width: 99%;
+            height: 500px;
+            background-color: #212121;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .parentDiv{
+            width :300px;
+            height: 300px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .childDiv{
+            border: 2px solid white;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="parentDiv">
+        <div class="childDiv">
+            <button>Click</button>
+        </div>
+    </div>
+
+    <script>
+        /* 
+        Events are the action or occurence that happen in the browser, triggered by the user or the browser itself.
+        These events can be things like - mouse click, key pressed, page loading, form submittion etc.
+        */
+
+        // Event Propagation
+        /* 
+        Event propagation refers to the mechanism by which events are transmitted through the DOM tree.
+        when a event is occure on an element in the DOM, it does not just affect only the specific element,
+        it also impact its ancestors and descandants. Event propogation describe how the event is passed through
+        these element. 
+        */
+
+        //1. Event Bubbling (denote : false)
+        /*
+        In event bubbling, when an event is fired on anested elemen, the event is firt handeled by the target
+        element itself and then bubbles up through up its ancesters in the DOM hierarchy
+        */
+        document.querySelector('button').addEventListener('click', () =>{
+            console.log("button clicked");
+        }, false);
+
+        document.querySelector('.childDiv').addEventListener('click', () =>{
+            console.log("child div");
+        }, false);
+
+        //2. Event capturing(denote : true)
+        /*
+        In event capturing, when an event is fired on nested element, the event is firstly captured by the 
+        outermost element  and then propogate inward to the target element.
+        */
+        document.querySelector('.parentDiv').addEventListener('click', () =>{
+            console.log(("Parent Div"));
+        }, true)
+    </script>
+</body>
+</html>

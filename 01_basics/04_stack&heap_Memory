@@ -1,0 +1,28 @@
+// ************ STACK MEMORY ****************
+ 
+/*
+ Stack stores primitive dataTypes, 
+ if we assign or pass value as a fuction argument,
+ so the copy of value is passed not original value, 
+ */
+
+let a = 5; //original value
+let b = a; //assign value of a to  b
+b = 10; //if we apply changes in b so the original valuse is not change
+console.log(a); //5
+console.log(b); //10
+
+// ************** HEAP MEMORY **************
+
+/*
+Heap memory stores non-premitive dataTypes,
+if  we assign/pass value as function argument,
+so the refrence(memory address) is passed
+*/
+
+let userOne = { Name : "Yash" }; // original object
+let userTwo = userOne;  //assign variable userOne to userTwo
+userTwo.Name = "Akshay"; //change the name property of userTwo, so it will also changed in userOne
+                         //Beacause both varible points on same Heap Memory Location(same refrence)
+console.log(userOne.Name); // Akshay
+console.log(userTwo.Name); // Akshay
