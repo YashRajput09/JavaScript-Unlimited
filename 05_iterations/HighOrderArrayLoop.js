@@ -1,4 +1,4 @@
-// for of loop : is used ti iterate over a iterable objects like array, string, map, set etc
+// for of loop : is used to iterate over a iterable objects like array, string, map, set etc
 // syntax: for(variable of object){}
 
 // to ARRAY
@@ -29,7 +29,7 @@ for(let [key, value] of map){
     // console.log(`${key} : ${value}`);
 }
 
-// Objects is not iteracle by for of loop 
+// Objects is not iterable by for of loop 
 // for in loop is used to iterate on Object
 const myObj = {
     Name : "Yash",

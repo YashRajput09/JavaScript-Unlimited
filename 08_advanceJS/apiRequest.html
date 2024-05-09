@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Api request using xmlHttpRequest</title>
+    <style>
+        body{
+            background: #212121;
+            color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        const url = 'https://api.github.com/users/YashRajput09';
+        
+        const xhr = new XMLHttpRequest(); //UNSEND (0) ** object has been created
+        // console.log("create : ", xhr.readyState); // 0
+        xhr.open('GET', url); //OPENED (1) ** request is ready to send 
+        // console.log("Request Send : ", xhr.readyState); // 1
+        xhr.onreadystatechange = function(){
+            //  console.log(xhr.readyState); // 2 3 4 
+             if(xhr.readyState === 4){
+                const data = JSON.parse(this.responseText)
+                console.log(data.name);
+             }
+            }
+            
+            xhr.send(); //HEADER RECEIVED (2) :  ** request is send to the server 
+            //LOADING (3) : The request is in process
+            //DONE (4) : The entire response have been received from server, It's time to perform necessary operations on this response
+        
+            </script>
+    </body>
+</html>

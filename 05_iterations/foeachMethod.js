@@ -1,6 +1,6 @@
 // forEach() method - allow to iterate over an array and perform an operation on each element of an array.
 // NOTE : forEach() doesnot return anything,so it's not suitable if we need to create a new array based on the elements of the original array.
-// syntax: array.foreach(callback(element, index, arr), thisValue);
+// syntax: array.forEach(callback(element, index, arr), thisValue);
 
 const coding = ["js", "ruby", "java", "python", "cpp"];
 coding.forEach((ele) => {
@@ -13,9 +13,9 @@ const cbFun = (item) =>{
 coding.forEach(cbFun);
 
 coding.forEach((element, index, arr)=>{
-    // console.log(element);
-    // console.log(index);
-    // console.log(arr);
+    console.log(element);
+    console.log(index);
+    console.log(arr);
 })
 
 const User = [
