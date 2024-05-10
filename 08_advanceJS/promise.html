@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #212121;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        // create a new promise
+const myPromise = new Promise((resolve, reject) =>{
+    //asynchronous operation
+    const randomNumber = Math.floor(Math.random() * 10) ;
+    setTimeout(() =>{ 
+        // console.log(myPromise); //state : pending
+        if(randomNumber > 5){
+            resolve(randomNumber); //resolve the promise with a value
+            // console.log(myPromise); //state : fulfilled
+        } else{
+            // console.log(" else here");
+            reject(new Error("Random Number is too low")); //Reject the promise with a error    
+            console.log(myPromise); //state : rejected
+        }
+    }, 1000);
+});
+
+//consuming the promise
+myPromise
+    .then((result) =>{
+        console.log(result);
+    })
+    .catch((error) =>{
+        console.log(error.message);
+    })
+
+//     const url = 'https://api.github.com/users/YashRajput09';
+//     const user = fetch(url);
+//     console.log(user);
+</script>
+</body>
+</html>
