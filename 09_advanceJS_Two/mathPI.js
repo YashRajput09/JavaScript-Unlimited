@@ -6,8 +6,8 @@ Syntax :
 Object.getOwnPropertyDescriptor(object_Name, Objeject_property);
 */
 
-const discripter = Object.getOwnPropertyDescriptor(Math, 'PI');
-// console.log(discripter);
+const descriptor = Object.getOwnPropertyDescriptor(Math, 'PI');
+// console.log(descriptor);
 
 
 /* 
